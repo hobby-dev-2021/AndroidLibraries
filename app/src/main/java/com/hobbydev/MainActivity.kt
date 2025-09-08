@@ -4,12 +4,15 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.tooling.preview.Preview
+import com.hobbydev.ui.Example
 import com.hobbydev.ui.theme.AndroidLibrariesTheme
 import com.hobbydev.ui.Title
 
@@ -32,7 +35,14 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Title(text = "Hello $name!")
+    Column {
+        Title(text = "Hello $name!")
+        Example(text = buildAnnotatedString
+        {
+            append("questo è un esempio di testo semplice")
+        }
+        )
+    }
 }
 
 @Preview(showBackground = true)

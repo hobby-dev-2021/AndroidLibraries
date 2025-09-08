@@ -1,0 +1,30 @@
+package com.hobbydev.ui.samples
+
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.withStyle
+import com.hobbydev.ui.Example
+
+@Composable
+fun ExampleMinimal(){
+    Example(
+        text = buildAnnotatedString {
+            append("questo è un esempio di testo semplice")
+        }
+    )
+}
+
+@Composable
+fun ExampleFull(){
+    Example(
+        text = buildAnnotatedString {
+            append("questo è un esempio di testo ")
+            withStyle(style = SpanStyle(fontWeight = FontWeight.Bold)) {
+                append("completo")
+            }
+        },
+        title = "titolo"
+    )
+}

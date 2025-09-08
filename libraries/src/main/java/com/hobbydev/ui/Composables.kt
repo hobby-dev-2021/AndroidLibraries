@@ -78,6 +78,11 @@ fun Title(
     )
 }
 
+/**
+ * Composable che crea un esempio di testo con un eventuale titolo.
+ * @sample com.hobbydev.ui.samples.ExampleMinimal
+ * @sample com.hobbydev.ui.samples.ExampleFull
+ */
 @Composable
 fun Example(
     text: AnnotatedString,
@@ -394,6 +399,9 @@ fun CustomSnackbar(data: SnackbarData) {
  * @param onRowClick Funzione da eseguire al click su una riga
  * @param cornerShape Raggio delle cornici dei contorni
  * @param isDataBold Indica se il testo della cella deve essere grassetto
+ * @sample com.hobbydev.ui.samples.SampleCustomGridTableMinimal()
+ * @sample com.hobbydev.ui.samples.SampleCustomGridTableWithHeader()
+ * @sample com.hobbydev.ui.samples.SampleCustomGridTableFull()
  * @return Unit
  */
 @Composable
