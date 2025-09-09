@@ -83,8 +83,8 @@ fun Title(
 
 /**
  * Composable che crea un esempio di testo con un eventuale titolo.
- * @sample com.hobbydev.ui.samples.ExampleMinimal
- * @sample com.hobbydev.ui.samples.ExampleFull
+ * @sample com.hobbydev.ui.samples.ExampleWithTitle
+ * @sample com.hobbydev.ui.samples.ExampleWithoutTitle
  */
 @Composable
 fun Example(

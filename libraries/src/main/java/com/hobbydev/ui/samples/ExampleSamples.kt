@@ -8,21 +8,21 @@ import androidx.compose.ui.text.withStyle
 import com.hobbydev.ui.Example
 
 @Composable
-fun ExampleMinimal(){
+fun ExampleWithoutTitle(){
     Example(
         text = buildAnnotatedString {
-            append("questo è un esempio di testo semplice")
+            append("questo è un esempio di testo semplice senza titolo")
         }
     )
 }
 
 @Composable
-fun ExampleFull(){
+fun ExampleWithTitle(){
     Example(
         text = buildAnnotatedString {
             append("questo è un esempio di testo ")
             withStyle(style = SpanStyle(fontWeight = FontWeight.Bold)) {
-                append("completo")
+                append("completo con il titolo")
             }
         },
         title = "titolo"
