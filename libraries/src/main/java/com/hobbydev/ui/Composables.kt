@@ -58,7 +58,10 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
-
+/**
+ * Composable che crea un titolo.
+ * @sample com.hobbydev.ui.samples.TitleSimple
+ */
 @Composable
 fun Title(
     text: String
