@@ -1,4 +1,4 @@
-package com.hobbydev
+package com.hobbydev.testlibraries
 
 import org.junit.Test
 

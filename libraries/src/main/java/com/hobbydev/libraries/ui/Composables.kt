@@ -1,4 +1,4 @@
-package com.hobbydev.ui
+package com.hobbydev.libraries.ui
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
@@ -60,7 +60,7 @@ import androidx.compose.ui.unit.dp
 
 /**
  * Composable che crea un titolo.
- * @sample com.hobbydev.ui.samples.TitleSimple
+ * @sample com.hobbydev.libraries.samples.TitleSimple
  */
 @Composable
 fun Title(
@@ -83,8 +83,8 @@ fun Title(
 
 /**
  * Composable che crea un esempio di testo con un eventuale titolo.
- * @sample com.hobbydev.ui.samples.ExampleWithTitle
- * @sample com.hobbydev.ui.samples.ExampleWithoutTitle
+ * @sample com.hobbydev.libraries.samples.ExampleWithTitle
+ * @sample com.hobbydev.libraries.samples.ExampleWithoutTitle
  */
 @Composable
 fun Example(
@@ -163,7 +163,7 @@ fun Example(
 
 /**
  * Composable che crea una regola con un testo complesso.
- * @sample com.hobbydev.ui.samples.RuleWithAnnotatedText
+ * @sample com.hobbydev.libraries.samples.RuleWithAnnotatedText
  */
 @Composable
 fun Rule(
@@ -199,7 +199,7 @@ fun Rule(
 
 /**
  * Composable che crea una regola con un testo semplice.
- * @sample com.hobbydev.ui.samples.RuleWithText
+ * @sample com.hobbydev.libraries.samples.RuleWithText
  */
 @Composable
 fun Rule(
@@ -233,6 +233,13 @@ fun Rule(
     }
 }
 
+/**
+ * Bottone cliccabile con icona, testo e descrizione accessibile.
+ * @sample com.hobbydev.libraries.samples.IndexButtonWithText
+ * @sample com.hobbydev.libraries.samples.IndexButtonWithIcon
+ * @sample com.hobbydev.libraries.samples.IndexButtonWithDescription
+ * @sample com.hobbydev.libraries.samples.IndexButtonWithIconCustomTint
+ */
 @Composable
 fun IndexButton(
     onClick: () -> Unit,

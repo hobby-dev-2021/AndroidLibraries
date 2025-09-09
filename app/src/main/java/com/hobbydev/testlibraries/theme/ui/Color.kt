@@ -1,4 +1,4 @@
-package com.hobbydev.ui.theme
+package com.hobbydev.testlibraries.theme.ui
 
 import androidx.compose.ui.graphics.Color
 

@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.hobbydev"
+    namespace = "com.hobbydev.testlibraries"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.hobbydev"
+        applicationId = "com.hobbydev.testlibraries"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

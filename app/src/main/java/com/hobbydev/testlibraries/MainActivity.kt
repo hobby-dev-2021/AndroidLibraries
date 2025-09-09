@@ -1,4 +1,5 @@
-package com.hobbydev
+package com.hobbydev.testlibraries
+
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -15,10 +16,11 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
-import com.hobbydev.ui.Example
-import com.hobbydev.ui.Rule
-import com.hobbydev.ui.theme.AndroidLibrariesTheme
-import com.hobbydev.ui.Title
+import com.hobbydev.libraries.ui.Example
+import com.hobbydev.libraries.ui.IndexButton
+import com.hobbydev.libraries.ui.Rule
+import com.hobbydev.testlibraries.theme.ui.AndroidLibrariesTheme
+import com.hobbydev.libraries.ui.Title
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,6 +54,11 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                 append("testo complesso")
             }
         })
+        IndexButton(
+            onClick = { /*TODO*/ },
+            stringResourseId = R.string.app_name,
+            descriptionResourseId = R.string.app_name
+        )
     }
 }
 

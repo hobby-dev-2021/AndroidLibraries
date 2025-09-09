@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.hobbydev"
+    namespace = "com.hobbydev.libraries"
     compileSdk = 35
 
     defaultConfig {

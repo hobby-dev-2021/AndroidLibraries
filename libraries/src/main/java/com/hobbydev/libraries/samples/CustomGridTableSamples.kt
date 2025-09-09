@@ -1,8 +1,8 @@
-package com.hobbydev.ui.samples
+package com.hobbydev.libraries.samples
 
 
 import androidx.compose.foundation.layout.Column
-import com.hobbydev.ui.CustomGridTable
+import com.hobbydev.libraries.ui.CustomGridTable
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp

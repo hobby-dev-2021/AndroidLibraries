@@ -1,7 +1,7 @@
-package com.hobbydev.ui.samples
+package com.hobbydev.libraries.samples
 
 import androidx.compose.runtime.Composable
-import com.hobbydev.ui.Title
+import com.hobbydev.libraries.ui.Title
 
 @Composable
 fun TitleSimple(){
