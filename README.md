@@ -1,2 +1,2 @@
 # AndroidLibraries
-Free libraries for android app
+Composables riutilizzabili nei progetti HobbyDev
