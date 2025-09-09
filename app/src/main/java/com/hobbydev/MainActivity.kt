@@ -10,9 +10,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import com.hobbydev.ui.Example
+import com.hobbydev.ui.Rule
 import com.hobbydev.ui.theme.AndroidLibrariesTheme
 import com.hobbydev.ui.Title
 
@@ -37,11 +41,17 @@ class MainActivity : ComponentActivity() {
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Column {
         Title(text = "Hello $name!")
-        Example(text = buildAnnotatedString
-        {
+        Example(text = buildAnnotatedString {
             append("questo è un esempio di testo semplice")
-        }
-        )
+        })
+
+        Rule("regola con testo semplice")
+        Rule( text = buildAnnotatedString {
+            append("questo è un esempio di regola che contiene un ")
+            withStyle(style = SpanStyle(fontWeight = FontWeight. Bold)) {
+                append("testo complesso")
+            }
+        })
     }
 }
 

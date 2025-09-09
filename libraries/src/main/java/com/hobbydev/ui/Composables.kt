@@ -161,6 +161,10 @@ fun Example(
     }
 }
 
+/**
+ * Composable che crea una regola con un testo complesso.
+ * @sample com.hobbydev.ui.samples.RuleWithAnnotatedText
+ */
 @Composable
 fun Rule(
     text: AnnotatedString
@@ -193,6 +197,10 @@ fun Rule(
     }
 }
 
+/**
+ * Composable che crea una regola con un testo semplice.
+ * @sample com.hobbydev.ui.samples.RuleWithText
+ */
 @Composable
 fun Rule(
     text: String
