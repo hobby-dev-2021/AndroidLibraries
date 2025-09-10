@@ -308,6 +308,11 @@ fun IndexButton(
     }
 }
 
+/**
+ * Composable che crea un'icona con un titolo.
+ * @sample com.hobbydev.libraries.samples.AlphabetLetterSelected
+ * @sample com.hobbydev.libraries.samples.AlphabetLetterUnselected
+ */
 @Composable
 fun AlphabetLetter(
     title: String,

@@ -6,8 +6,11 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Build
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -16,6 +19,7 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
+import com.hobbydev.libraries.ui.AlphabetLetter
 import com.hobbydev.libraries.ui.Example
 import com.hobbydev.libraries.ui.IndexButton
 import com.hobbydev.libraries.ui.Rule
@@ -57,8 +61,21 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         IndexButton(
             onClick = { /*TODO*/ },
             stringResourseId = R.string.app_name,
-            descriptionResourseId = R.string.app_name
+            descriptionResourseId = R.string.app_name,
+            icon = Icons.Filled.Build
         )
+        Row {
+            AlphabetLetter(
+                title = "A",
+                selected = true,
+                onLetterClick = {}
+            )
+            AlphabetLetter(
+                title = "B",
+                selected = false,
+                onLetterClick = {}
+            )
+        }
     }
 }
 
