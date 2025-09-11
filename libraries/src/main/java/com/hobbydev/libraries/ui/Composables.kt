@@ -60,6 +60,7 @@ import androidx.compose.ui.unit.dp
 
 /**
  * Composable che crea un titolo.
+ * @param text Testo del titolo.
  * @sample com.hobbydev.libraries.samples.TitleSimple
  */
 @Composable
@@ -83,6 +84,8 @@ fun Title(
 
 /**
  * Composable che crea un esempio di testo con un eventuale titolo.
+ * @param text Testo dell'esempio.
+ * @param title Titolo dell'esempio.
  * @sample com.hobbydev.libraries.samples.ExampleWithTitle
  * @sample com.hobbydev.libraries.samples.ExampleWithoutTitle
  */
@@ -163,6 +166,7 @@ fun Example(
 
 /**
  * Composable che crea una regola con un testo complesso.
+ * @param text Testo complesso della regola.
  * @sample com.hobbydev.libraries.samples.RuleWithAnnotatedText
  */
 @Composable
@@ -199,6 +203,7 @@ fun Rule(
 
 /**
  * Composable che crea una regola con un testo semplice.
+ * @param text Testo semplice della regola.
  * @sample com.hobbydev.libraries.samples.RuleWithText
  */
 @Composable
@@ -235,6 +240,11 @@ fun Rule(
 
 /**
  * Bottone cliccabile con icona, testo e descrizione accessibile.
+ * @param onClick Funzione da eseguire al click.
+ * @param stringResourseId Testo da mostrare.
+ * @param descriptionResourseId Descrizione accessibile da mostrare.
+ * @param icon icona da mostrare.
+ * @param tint colore dell'icona.
  * @sample com.hobbydev.libraries.samples.IndexButtonWithText
  * @sample com.hobbydev.libraries.samples.IndexButtonWithIcon
  * @sample com.hobbydev.libraries.samples.IndexButtonWithDescription
@@ -309,7 +319,10 @@ fun IndexButton(
 }
 
 /**
- * Composable che crea un'icona con un titolo.
+ * Composable che crea un'icona con una lettera dell'alfabeto.
+ * @param title Lettera dell'alfabeto dell'icona.
+ * @param selected Indica se l'icona è selezionata.
+ * @param onLetterClick Funzione da eseguire al click sull'icona.
  * @sample com.hobbydev.libraries.samples.AlphabetLetterSelected
  * @sample com.hobbydev.libraries.samples.AlphabetLetterUnselected
  */
@@ -354,6 +367,8 @@ fun AlphabetLetter(
 
 /**
  * Composable che crea un'icona bandiera.
+ * @param flagResId ID della risorsa dell'icona bandiera.
+ * @param onFlagClick Funzione da eseguire al click sull'icona.
  * @sample com.hobbydev.libraries.samples.FlagSample
  */
 @Composable
@@ -394,6 +409,7 @@ fun Flag(
 /**
  * Composable che crea una snackbar con un messaggio specificato.
  * @param data Dati della snackbar.
+ * @sample com.hobbydev.libraries.samples.CustomSnackbarSample
  */
 @Composable
 fun CustomSnackbar(data: SnackbarData) {
