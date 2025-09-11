@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.0.2] - 2025-09-08
+### Added
+- Aggiunto alcuni esempi: Example e CustomGridTable
+
 ## [1.0.1] - 2025-09-07
 ### Added
 - Nuovi composable da riutilizzare:
@@ -22,6 +26,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   - CustomSearchField
   - CustomSwitchRow 
 
-## [1.0.2] - 2025-09-08
-### Added
-- Aggiunto alcuni esempi: Example e CustomGridTable
