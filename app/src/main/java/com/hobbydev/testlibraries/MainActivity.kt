@@ -21,6 +21,7 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import com.hobbydev.libraries.ui.AlphabetLetter
 import com.hobbydev.libraries.ui.Example
+import com.hobbydev.libraries.ui.Flag
 import com.hobbydev.libraries.ui.IndexButton
 import com.hobbydev.libraries.ui.Rule
 import com.hobbydev.testlibraries.theme.ui.AndroidLibrariesTheme
@@ -76,6 +77,10 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                 onLetterClick = {}
             )
         }
+        Flag(
+            flagResId = android.R.drawable.arrow_up_float,
+            onFlagClick = {}
+        )
     }
 }
 

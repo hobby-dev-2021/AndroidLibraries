@@ -352,6 +352,10 @@ fun AlphabetLetter(
     }
 }
 
+/**
+ * Composable che crea un'icona bandiera.
+ * @sample com.hobbydev.libraries.samples.FlagSample
+ */
 @Composable
 fun Flag(
     @DrawableRes flagResId: Int,
