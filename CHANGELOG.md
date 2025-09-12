@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.0] - 2025-09-12
+### Added
+- Aggiunto gli esempi per tutti i composable
+### Changed
+- Refactoring namespace packages
+
 ## [1.0.2] - 2025-09-08
 ### Added
 - Aggiunto alcuni esempi: Example e CustomGridTable
