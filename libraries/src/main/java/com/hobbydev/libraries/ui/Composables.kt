@@ -59,7 +59,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
 /**
- * Composable che crea un titolo.
+ * Composable che crea un testo di tipo titolo.
  * @param text Testo del titolo.
  * @sample com.hobbydev.libraries.samples.TitleSimple
  */
@@ -83,7 +83,7 @@ fun Title(
 }
 
 /**
- * Composable che crea un esempio di testo con un eventuale titolo.
+ * Composable che crea una riga con un esempio di testo con un eventuale titolo.
  * @param text Testo dell'esempio.
  * @param title Titolo dell'esempio.
  * @sample com.hobbydev.libraries.samples.ExampleWithTitle
@@ -165,7 +165,7 @@ fun Example(
 }
 
 /**
- * Composable che crea una regola con un testo complesso.
+ * Composable che crea una Card contenente una regola con un testo complesso.
  * @param text Testo complesso della regola.
  * @sample com.hobbydev.libraries.samples.RuleWithAnnotatedText
  */
@@ -202,7 +202,7 @@ fun Rule(
 }
 
 /**
- * Composable che crea una regola con un testo semplice.
+ * Composable che crea una Card contenente una regola con un testo semplice.
  * @param text Testo semplice della regola.
  * @sample com.hobbydev.libraries.samples.RuleWithText
  */
@@ -319,7 +319,7 @@ fun IndexButton(
 }
 
 /**
- * Composable che crea un'icona con una lettera dell'alfabeto.
+ * Composable che crea una Card contenente un'icona con una lettera dell'alfabeto.
  * @param title Lettera dell'alfabeto dell'icona.
  * @param selected Indica se l'icona è selezionata.
  * @param onLetterClick Funzione da eseguire al click sull'icona.
@@ -366,7 +366,7 @@ fun AlphabetLetter(
 }
 
 /**
- * Composable che crea un'icona bandiera.
+ * Composable che crea una Card contenente un'icona bandiera.
  * @param flagResId ID della risorsa dell'icona bandiera.
  * @param onFlagClick Funzione da eseguire al click sull'icona.
  * @sample com.hobbydev.libraries.samples.FlagSample
@@ -442,9 +442,9 @@ fun CustomSnackbar(data: SnackbarData) {
  * @param onRowClick Funzione da eseguire al click su una riga
  * @param cornerShape Raggio delle cornici dei contorni
  * @param isDataBold Indica se il testo della cella deve essere grassetto
- * @sample com.hobbydev.ui.samples.SampleCustomGridTableMinimal()
- * @sample com.hobbydev.ui.samples.SampleCustomGridTableWithHeader()
- * @sample com.hobbydev.ui.samples.SampleCustomGridTableFull()
+ * @sample com.hobbydev.libraries.samples.CustomGridTableMinimal
+ * @sample com.hobbydev.libraries.samples.CustomGridTableWithHeader
+ * @sample com.hobbydev.libraries.samples.CustomGridTableFull
  * @return Unit
  */
 @Composable
@@ -491,6 +491,9 @@ fun CustomGridTable(
  * @param onRowClick Funzione da eseguire al click su una riga
  * @param cornerShape Raggio delle cornici dei contorni
  * @param isDataBold Indica se il testo della cella deve essere grassetto
+ * @sample com.hobbydev.libraries.samples.CustomAnnotatedGridTableMinimal
+ * @sample com.hobbydev.libraries.samples.CustomAnnotatedGridTableWithHeader
+ * @sample com.hobbydev.libraries.samples.CustomAnnotatedGridTableFull
  * @return Unit
  */
 @Composable
@@ -653,6 +656,16 @@ fun CustomAnnotatedGridTable(
     }
 }
 
+/**
+ * Composable che crea un campo di input per il testo.
+ * @param value Valore del campo di input.
+ * @param onValueChange Funzione da eseguire al cambio di valore del campo di input.
+ * @param enabled Indica se il campo di input è abilitato o meno.
+ * @param label Testo da mostrare come label del campo di input.
+ * @param singleLine Indica se il campo di input può essere multilinea o meno.
+ * @sample com.hobbydev.libraries.samples.CustomInputFieldSimple
+ * @sample com.hobbydev.libraries.samples.CustomInputFieldFull
+ */
 @Composable
 fun CustomInputField (
     value: String,
@@ -686,6 +699,15 @@ fun CustomInputField (
     )
 }
 
+/**
+ * Composable che crea un campo di ricerca con icona e testo.
+ * @param value Testo da ricercare.
+ * @param onValueChange Funzione da eseguire al cambio di valore del campo di input.
+ * @param label Testo da mostrare come label del campo di input.
+ * @param singleLine Indica se il campo di input può essere multilinea o meno.
+ * @sample com.hobbydev.libraries.samples.CustomSearchFieldSimple
+ * @sample com.hobbydev.libraries.samples.CustomSearchFieldFull
+ */
 @Composable
 fun CustomSearchField (
     value: String,
@@ -734,6 +756,13 @@ fun CustomSearchField (
     )
 }
 
+/**
+ * Composable che crea una riga con uno switch personalizzato.
+ * @param checked Indica se l'opzione è selezionata.
+ * @param onCheckedChange Funzione da eseguire al cambio di stato dell'opzione.
+ * @param text Testo da mostrare.
+ * @sample com.hobbydev.libraries.samples.CustomSwitchRowSimple
+ */
 @Composable
 fun CustomSwitchRow (
     checked: Boolean,
