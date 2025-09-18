@@ -4,7 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+#### MAJOR.MINOR.PATCH
+- MAJOR: cambiamenti incompatibili con versioni precedenti (breaking changes).
+- MINOR: nuove funzionalità retro-compatibili.
+- PATCH: correzioni di bug o piccole modifiche che non introducono nuove funzionalità.
+
 ## [Unreleased]
+
+## [1.2.0] - 2025-09-18
+### Added
+- Aggiunto composable: LinkWithIcon, TripleLabelBox, ArrowDown, ArrowRight
+### Changed
+- Aggiornato versione del BOM
 
 ## [1.1.0] - 2025-09-12
 ### Added
