@@ -40,12 +40,17 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.core.ktx)
 //    implementation(libs.androidx.appcompat)
+
+    //gestite dal BOM (non mettere la versione esplicitamente)
     implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.material)
-    implementation(libs.androidx.runtime.android)
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.material.icons.extended)
+
+    //implementation(libs.material)
+    implementation(libs.androidx.runtime.android)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

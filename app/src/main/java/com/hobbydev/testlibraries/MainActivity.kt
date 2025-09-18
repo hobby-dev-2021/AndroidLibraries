@@ -56,62 +56,70 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Column {
-        Title(text = "Hello $name!")
-        Example(text = buildAnnotatedString {
-            append("questo è un esempio di testo semplice")
-        })
+//        Title(text = "Hello $name!")
+//        Example(text = buildAnnotatedString {
+//            append("questo è un esempio di testo semplice")
+//        })
 
-        Rule("regola con testo semplice")
-        Rule( text = buildAnnotatedString {
-            append("questo è un esempio di regola che contiene un ")
-            withStyle(style = SpanStyle(fontWeight = FontWeight. Bold)) {
-                append("testo complesso")
-            }
-        })
-        IndexButton(
-            onClick = { /*TODO*/ },
-            stringResourseId = R.string.app_name,
-            descriptionResourseId = R.string.app_name,
-            icon = Icons.Filled.Build
-        )
-        Row {
-            AlphabetLetter(
-                title = "A",
-                selected = true,
-                onLetterClick = {}
-            )
-            AlphabetLetter(
-                title = "B",
-                selected = false,
-                onLetterClick = {}
-            )
-        }
-        Flag(
-            flagResId = android.R.drawable.arrow_up_float,
-            onFlagClick = {}
-        )
-        val snackbarHostState = remember { SnackbarHostState() }
-        val scope = rememberCoroutineScope()
-        Scaffold(
-            snackbarHost = {
-                SnackbarHost(snackbarHostState) { data ->
-                    CustomSnackbar(data)
-                }
-            }
-        ) { paddingValues ->
-            Column(modifier = Modifier.padding(paddingValues)) {
-                Button(onClick =
-                {
-                    scope.launch {
-                        snackbarHostState.showSnackbar("Esempio di messaggio")
-                    }
-                }
-                ) {
-                    Text("Mostra Snackbar")
-                }
-            }
-        }
+//        Rule("regola con testo semplice")
+//        Rule( text = buildAnnotatedString {
+//            append("questo è un esempio di regola che contiene un ")
+//            withStyle(style = SpanStyle(fontWeight = FontWeight. Bold)) {
+//                append("testo complesso")
+//            }
+//        })
+//        IndexButton(
+//            onClick = { /*TODO*/ },
+//            stringResourseId = R.string.app_name,
+//            descriptionResourseId = R.string.app_name,
+//            icon = Icons.Filled.Build
+//        )
+//        Row {
+//            AlphabetLetter(
+//                title = "A",
+//                selected = true,
+//                onLetterClick = {}
+//            )
+//            AlphabetLetter(
+//                title = "B",
+//                selected = false,
+//                onLetterClick = {}
+//            )
+//        }
+//        Flag(
+//            flagResId = android.R.drawable.arrow_up_float,
+//            onFlagClick = {}
+//        )
+//        val snackbarHostState = remember { SnackbarHostState() }
+//        val scope = rememberCoroutineScope()
+//        Scaffold(
+//            snackbarHost = {
+//                SnackbarHost(snackbarHostState) { data ->
+//                    CustomSnackbar(data)
+//                }
+//            }
+//        ) { paddingValues ->
+//            Column(modifier = Modifier.padding(paddingValues)) {
+//                Button(onClick =
+//                {
+//                    scope.launch {
+//                        snackbarHostState.showSnackbar("Esempio di messaggio")
+//                    }
+//                }
+//                ) {
+//                    Text("Mostra Snackbar")
+//                }
+//            }
+//        }
 
+        val data = listOf(
+            listOf("riga 1 colonna 1"),
+            listOf("riga 2 colonna 1")
+        )
+        CustomGridTable(
+            data = data,
+            clickableRows = setOf(0, 1),
+        )
     }
 }
 

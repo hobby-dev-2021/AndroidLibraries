@@ -25,8 +25,11 @@ import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
+import androidx.compose.material.icons.filled.ArrowDownward
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Link
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -52,9 +55,15 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.LinkAnnotation
+import androidx.compose.ui.text.TextLinkStyles
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
@@ -791,7 +800,169 @@ fun CustomSwitchRow (
     }
 }
 
+/**
+ * Composable che crea un link cliccabile con icona.
+ * @param text Testo del link (viene usato anche come contentDescription per l'icona).
+ * @param tag Tag del link.
+ * @param icon icona da mostrare.
+ * @param onClick Funzione da eseguire al click sul link.
+ */
+@Composable
+fun LinkWithIcon(
+    text: String,
+    tag: String,
+    icon: ImageVector = Icons.Filled.Link,
+    onClick: () -> Unit,
+){
+    Row (
+        horizontalArrangement = Arrangement.Center,
+        verticalAlignment = Alignment.CenterVertically
+    ){
+        Icon(
+            imageVector = icon,
+            contentDescription = text,
+            modifier = Modifier
+                .size(32.dp),
+            tint = MaterialTheme.colorScheme.secondary
+        )
+        Spacer(modifier = Modifier.width(8.dp))
+        Text(
+            text = buildAnnotatedString {
+                // parte cliccabile
+                pushLink(
+                    LinkAnnotation.Clickable(
+                        tag = tag,
+                        styles = TextLinkStyles(
+                            style = SpanStyle(
+                                color = MaterialTheme.colorScheme.secondary,
+                            )
+                        ),
+                        linkInteractionListener = { link ->
+                            if (link is LinkAnnotation.Clickable) {
+                                onClick() // qui richiamo la callback
+                            }
+                        }
+                    )
+                )
+                withStyle(SpanStyle(textDecoration = TextDecoration.Underline)){
+                    append(text)
+                }
+                pop()
+            },
+            style = MaterialTheme.typography.titleLarge,
+            color = MaterialTheme.colorScheme.primary,
+            modifier = Modifier
+                .padding(vertical = 8.dp)
+        )
+    }
+}
 
+/**
+ * Composable che crea un Box con tre label in verticale.
+ * @param mainText Testo della prima label.
+ * @param subText1 Testo della seconda label.
+ * @param subText2 Testo della terza label.
+ * @param width Percentuale di larghezza del Box.
+ */
+@Composable
+fun TripleLabelBox(
+    mainText: String,
+    subText1: String? = null,
+    subText2: String? = null,
+    width: Float = 1f
+) {
+    Row(
+        horizontalArrangement = Arrangement.spacedBy(2.dp),
+        modifier = Modifier
+            .height(IntrinsicSize.Min)
+            .fillMaxWidth(fraction = width)
+    ) {
+        Box(
+            modifier = Modifier
+                .clip(MaterialTheme.shapes.medium)
+                .padding(2.dp)
+                .weight(1f)
+                .fillMaxHeight()
+                .border(
+                    width = 2.dp,
+                    color = MaterialTheme.colorScheme.secondaryContainer,
+                    shape = MaterialTheme.shapes.medium
+                )
+        ) {
+            Column(
+                modifier = Modifier
+                    .padding(8.dp)
+                    .align(Alignment.Center),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    text = mainText,
+                    style = MaterialTheme.typography.headlineSmall,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.primary,
+                    textAlign = TextAlign.Center
+                )
+                subText1?.let {
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        text = it,
+                        style = MaterialTheme.typography.headlineSmall,
+                        color = MaterialTheme.colorScheme.primary,
+                        textAlign = TextAlign.Center
+                    )
+                }
+                subText2?.let {
+                    Text(
+                        text = it,
+                        style = MaterialTheme.typography.bodyLarge,
+                        color = MaterialTheme.colorScheme.primary.copy(alpha = 0.8f),
+                        textAlign = TextAlign.Center
+                    )
+                }
+            }
+        }
+    }
+}
+
+/**
+ * Composable che crea un Box con un'icona di freccia verso il basso.
+ */
+@Composable
+fun ArrowDown() {
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 8.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        Icon(
+            imageVector = Icons.Filled.ArrowDownward,
+            contentDescription = "Next step",
+            modifier = Modifier.size(32.dp),
+            tint = MaterialTheme.colorScheme.primary
+        )
+    }
+}
+
+/**
+ * Composable che crea un Box con un'icona di freccia verso destra.
+ */
+@Composable
+fun ArrowRight() {
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 8.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        Icon(
+            imageVector = Icons.AutoMirrored.Filled.ArrowForward,
+            contentDescription = "Next step",
+            modifier = Modifier.size(32.dp),
+            tint = MaterialTheme.colorScheme.primary
+        )
+    }
+}
 
 
 
