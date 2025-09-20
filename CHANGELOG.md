@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.2.1] - 2025-09-20
+### Changed
+- Composable CustomInputField: aggiunto parametro per larghezza del campo
+
 ## [1.2.0] - 2025-09-18
 ### Added
 - Aggiunto composable: LinkWithIcon, TripleLabelBox, ArrowDown, ArrowRight

@@ -671,6 +671,7 @@ fun CustomAnnotatedGridTable(
  * @param onValueChange Funzione da eseguire al cambio di valore del campo di input.
  * @param enabled Indica se il campo di input è abilitato o meno.
  * @param label Testo da mostrare come label del campo di input.
+ * @param width Larghezza del campo di input.
  * @param singleLine Indica se il campo di input può essere multilinea o meno.
  * @sample com.hobbydev.libraries.samples.CustomInputFieldSimple
  * @sample com.hobbydev.libraries.samples.CustomInputFieldFull
@@ -681,6 +682,7 @@ fun CustomInputField (
     onValueChange: (String) -> Unit,
     enabled: Boolean = true,
     @StringRes label: Int,
+    width: Float = 1f,
     singleLine: Boolean = true
 ) {
     OutlinedTextField(
@@ -701,7 +703,7 @@ fun CustomInputField (
             focusedBorderColor = MaterialTheme.colorScheme.onSecondaryContainer,
         ),
         textStyle = MaterialTheme.typography.titleLarge,
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth(fraction = width),
         enabled = enabled,
         singleLine = singleLine,
         shape = MaterialTheme.shapes.medium

@@ -27,6 +27,7 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import com.hobbydev.libraries.ui.AlphabetLetter
 import com.hobbydev.libraries.ui.CustomGridTable
+import com.hobbydev.libraries.ui.CustomInputField
 import com.hobbydev.libraries.ui.CustomSnackbar
 import com.hobbydev.libraries.ui.Example
 import com.hobbydev.libraries.ui.Flag
@@ -56,6 +57,13 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Column {
+        CustomInputField(
+            value = "testo di prova",
+            onValueChange = { },
+            width = 0.5f,
+            label = R.string.app_name,
+        )
+
 //        Title(text = "Hello $name!")
 //        Example(text = buildAnnotatedString {
 //            append("questo è un esempio di testo semplice")
@@ -112,14 +120,14 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 //            }
 //        }
 
-        val data = listOf(
-            listOf("riga 1 colonna 1"),
-            listOf("riga 2 colonna 1")
-        )
-        CustomGridTable(
-            data = data,
-            clickableRows = setOf(0, 1),
-        )
+//        val data = listOf(
+//            listOf("riga 1 colonna 1"),
+//            listOf("riga 2 colonna 1")
+//        )
+//        CustomGridTable(
+//            data = data,
+//            clickableRows = setOf(0, 1),
+//        )
     }
 }
 
