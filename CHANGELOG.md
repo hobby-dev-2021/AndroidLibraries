@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.2.2] - 2025-09-28
+### Changed
+- Modificato la visibilità delle funzioni di esempio da public a private
+
 ## [1.2.1] - 2025-09-20
 ### Changed
 - Composable CustomInputField: aggiunto parametro per larghezza del campo
