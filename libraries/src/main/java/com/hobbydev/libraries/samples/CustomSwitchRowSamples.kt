@@ -8,7 +8,7 @@ import androidx.compose.runtime.setValue
 import com.hobbydev.libraries.ui.CustomSwitchRow
 
 @Composable
-fun CustomSwitchRowSimple() {
+private fun CustomSwitchRowSimple() {
     var isChecked by remember { mutableStateOf(false) }
 
     CustomSwitchRow(

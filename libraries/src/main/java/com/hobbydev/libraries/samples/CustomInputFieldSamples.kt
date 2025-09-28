@@ -8,7 +8,7 @@ import androidx.compose.runtime.setValue
 import com.hobbydev.libraries.ui.CustomInputField
 
 @Composable
-fun CustomInputFieldSimple() {
+private fun CustomInputFieldSimple() {
     var text by remember { mutableStateOf("") }
     CustomInputField(
         value = text,
@@ -18,7 +18,7 @@ fun CustomInputFieldSimple() {
 }
 
 @Composable
-fun CustomInputFieldFull() {
+private fun CustomInputFieldFull() {
     var text by remember { mutableStateOf("") }
 
     CustomInputField(

@@ -9,7 +9,7 @@ import com.hobbydev.libraries.ui.IndexButton
 
 
 @Composable
-fun IndexButtonWithText() {
+private fun IndexButtonWithText() {
     IndexButton(
         onClick = { /* azione di esempio */ },
         stringResourseId = R.string.ok
@@ -17,7 +17,7 @@ fun IndexButtonWithText() {
 }
 
 @Composable
-fun IndexButtonWithIcon() {
+private fun IndexButtonWithIcon() {
     IndexButton(
         onClick = { /* azione di esempio */ },
         stringResourseId = R.string.ok,
@@ -26,7 +26,7 @@ fun IndexButtonWithIcon() {
 }
 
 @Composable
-fun IndexButtonWithDescription() {
+private fun IndexButtonWithDescription() {
     IndexButton(
         onClick = { /* azione di esempio */ },
         stringResourseId = R.string.ok,
@@ -35,7 +35,7 @@ fun IndexButtonWithDescription() {
 }
 
 @Composable
-fun IndexButtonWithIconCustomTint() {
+private fun IndexButtonWithIconCustomTint() {
     IndexButton(
         onClick = { /* azione di esempio */ },
         stringResourseId = R.string.ok,

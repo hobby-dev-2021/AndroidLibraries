@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import com.hobbydev.libraries.ui.CustomAnnotatedGridTable
 
 @Composable
-fun CustomAnnotatedGridTableMinimal(){
+private fun CustomAnnotatedGridTableMinimal(){
     val data = listOf(
         listOf(
             buildAnnotatedString {
@@ -59,7 +59,7 @@ fun CustomAnnotatedGridTableMinimal(){
 }
 
 @Composable
-fun CustomAnnotatedGridTableWithHeader(){
+private fun CustomAnnotatedGridTableWithHeader(){
     Column {
         val oneHeaderColum = listOf(listOf("l'intestazione occupa 2 colonne"))
         val data1 = listOf(
@@ -176,7 +176,7 @@ fun CustomAnnotatedGridTableWithHeader(){
 }
 
 @Composable
-fun CustomAnnotatedGridTableFull(){
+private fun CustomAnnotatedGridTableFull(){
     Column {
         val doubleHeader = listOf(
             listOf("intestazione prima riga"),

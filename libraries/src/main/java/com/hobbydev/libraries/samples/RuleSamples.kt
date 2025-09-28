@@ -8,14 +8,14 @@ import androidx.compose.ui.text.withStyle
 import com.hobbydev.libraries.ui.Rule
 
 @Composable
-fun RuleWithText(){
+private fun RuleWithText(){
     Rule(
         text = "questo è un esempio di regola che contiene testo semplice"
     )
 }
 
 @Composable
-fun RuleWithAnnotatedText(){
+private fun RuleWithAnnotatedText(){
     Rule(
         text = buildAnnotatedString {
             append("questo è un esempio di regola che contiene un ")

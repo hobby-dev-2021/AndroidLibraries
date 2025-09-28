@@ -8,7 +8,7 @@ import androidx.compose.ui.text.withStyle
 import com.hobbydev.libraries.ui.Example
 
 @Composable
-fun ExampleWithoutTitle(){
+private fun ExampleWithoutTitle(){
     Example(
         text = buildAnnotatedString {
             append("questo è un esempio di testo semplice senza titolo")
@@ -17,7 +17,7 @@ fun ExampleWithoutTitle(){
 }
 
 @Composable
-fun ExampleWithTitle(){
+private fun ExampleWithTitle(){
     Example(
         text = buildAnnotatedString {
             append("questo è un esempio di testo ")

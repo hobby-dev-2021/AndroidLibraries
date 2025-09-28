@@ -9,8 +9,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 
+
 @Composable
-fun CustomGridTableMinimal(){
+private fun CustomGridTableMinimal(){
     val data = listOf(
         listOf("riga 1 colonna 1", "riga 1 colonna 2"),
         listOf("riga 2 colonna 1", "riga 2 colonna 2"),
@@ -22,7 +23,7 @@ fun CustomGridTableMinimal(){
 }
 
 @Composable
-fun CustomGridTableWithHeader(){
+private fun CustomGridTableWithHeader(){
     Column {
         val oneHeaderColum = listOf(listOf("l'intestazione occupa 2 colonne"))
         val data1 = listOf(
@@ -61,7 +62,7 @@ fun CustomGridTableWithHeader(){
 }
 
 @Composable
-fun CustomGridTableFull(){
+private fun CustomGridTableFull(){
     Column {
         val doubleHeader = listOf(
             listOf("intestazione prima riga"),

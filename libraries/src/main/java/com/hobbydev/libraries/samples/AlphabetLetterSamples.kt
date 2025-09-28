@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import com.hobbydev.libraries.ui.AlphabetLetter
 
 @Composable
-fun AlphabetLetterSelected(){
+private fun AlphabetLetterSelected(){
     AlphabetLetter(
         title ="A",
         selected = true,
@@ -13,7 +13,7 @@ fun AlphabetLetterSelected(){
 }
 
 @Composable
-fun AlphabetLetterUnselected(){
+private fun AlphabetLetterUnselected(){
     AlphabetLetter(
         title ="A",
         selected = false,

@@ -8,7 +8,7 @@ import androidx.compose.runtime.setValue
 import com.hobbydev.libraries.ui.CustomSearchField
 
 @Composable
-fun CustomSearchFieldSimple() {
+private fun CustomSearchFieldSimple() {
     var searchText by remember { mutableStateOf("") }
 
     CustomSearchField(
@@ -19,7 +19,7 @@ fun CustomSearchFieldSimple() {
 }
 
 @Composable
-fun CustomSearchFieldFull() {
+private fun CustomSearchFieldFull() {
     var searchText by remember { mutableStateOf("") }
 
     CustomSearchField(

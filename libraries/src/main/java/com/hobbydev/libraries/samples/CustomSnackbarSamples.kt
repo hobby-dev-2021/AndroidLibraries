@@ -1,6 +1,5 @@
 package com.hobbydev.libraries.samples
 
-import android.R
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
@@ -16,7 +15,7 @@ import com.hobbydev.libraries.ui.CustomSnackbar
 import kotlinx.coroutines.launch
 
 @Composable
-fun CustomSnackbarSample() {
+private fun CustomSnackbarSample() {
     val snackbarHostState = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
     Scaffold(
