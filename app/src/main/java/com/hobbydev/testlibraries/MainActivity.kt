@@ -5,13 +5,17 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Build
 import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -25,6 +29,7 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.hobbydev.libraries.ui.AlphabetLetter
 import com.hobbydev.libraries.ui.CustomGridTable
 import com.hobbydev.libraries.ui.CustomInputField
@@ -33,9 +38,9 @@ import com.hobbydev.libraries.ui.Example
 import com.hobbydev.libraries.ui.Flag
 import com.hobbydev.libraries.ui.IndexButton
 import com.hobbydev.libraries.ui.Rule
+import com.hobbydev.libraries.ui.SectionHeader
 import com.hobbydev.testlibraries.theme.ui.AndroidLibrariesTheme
 import com.hobbydev.libraries.ui.Title
-import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,14 +62,25 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Column {
-        CustomInputField(
-            value = "testo di prova",
-            onValueChange = { },
-            width = 0.5f,
-            label = R.string.app_name,
-        )
+//        CustomInputField(
+//            value = "testo di prova",
+//            onValueChange = { },
+//            width = 0.5f,
+//            label = R.string.app_name,
+//        )
 
-//        Title(text = "Hello $name!")
+        SectionHeader(text = "header")
+        Spacer(Modifier.height(16.dp))
+        Title(
+            text = "titolo senza sfondo",
+        )
+        Spacer(Modifier.height(16.dp))
+        Title(
+            text = "titolo con sfondo",
+            backgroundColor = true
+        )
+        Spacer(Modifier.height(16.dp))
+
 //        Example(text = buildAnnotatedString {
 //            append("questo è un esempio di testo semplice")
 //        })

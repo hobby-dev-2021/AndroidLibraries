@@ -68,13 +68,38 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
 /**
+ * Composable che crea un header
+ * @param text Testo dell'header.
+ * @sample com.hobbydev.libraries.samples.SectionHeaderSimple
+ */
+@Composable
+fun SectionHeader(
+    text: String,
+) {
+    Text(
+        text = text,
+        style = MaterialTheme.typography.headlineMedium.copy(fontWeight = FontWeight.Bold),
+        color = MaterialTheme.colorScheme.primary,
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(MaterialTheme.colorScheme.primaryContainer)
+            .padding(horizontal = 16.dp, vertical = 8.dp),
+        textAlign = TextAlign.Center
+    )
+}
+
+
+/**
  * Composable che crea un testo di tipo titolo.
  * @param text Testo del titolo.
+ * @param backgroundColor Indica se il testo deve avere il background di default o meno.
  * @sample com.hobbydev.libraries.samples.TitleSimple
+ * @sample com.hobbydev.libraries.samples.TitleWithBackgroundColor
  */
 @Composable
 fun Title(
-    text: String
+    text: String,
+    backgroundColor: Boolean = false
 ){
     Text(
         text = text,
@@ -83,11 +108,14 @@ fun Title(
         color = MaterialTheme.colorScheme.primary,
         fontWeight = FontWeight.Bold,
         modifier = Modifier
-            .padding(
-                start = 8.dp,
-                end = 8.dp
-            )
+            .padding(horizontal = 8.dp)
             .fillMaxWidth()
+            .then(
+                if (backgroundColor)
+                    Modifier.background(MaterialTheme.colorScheme.primaryContainer)
+                else
+                    Modifier
+            )
     )
 }
 
