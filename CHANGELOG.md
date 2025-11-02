@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.3.1] - 2025-09-28
+### Added
+- Aggiunto composable: SectionHeader
+### Changed
+- Modificato composable Title: aggiunto possibilità di avere lo sfondo
+
 ## [1.2.2] - 2025-09-28
 ### Changed
 - Modificato la visibilità delle funzioni di esempio da public a private
